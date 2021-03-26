@@ -12,8 +12,7 @@ int first_fit(int process[10]){
 
     for(int i = 0; i < 10; i++){
         for(int h = 0; h < 12; h++){
-            if(flag[i] == 0 && process[i] <= holes[h]){
-                    allocation[h] = 1;
+            if(flag[i] == 0 && holes[h] >= process[i]){
                     flag[i] = 1;
                     holes[h] -= process[i];
                     break; 
